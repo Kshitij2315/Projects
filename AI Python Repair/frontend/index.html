@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Python Repair</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="logo">
+        <span class="logo-icon">⚙</span>
+        <span>AI Python Repair</span>
+    </div>
+
+    <div class="header-status">
+        <span class="status-dot"></span>
+        API Connected
+    </div>
+</header>
+
+
+<main class="container">
+
+    <!-- CODE SECTION -->
+    <section class="workspace">
+
+        <div class="panel code-panel">
+
+            <div class="panel-header">
+                <h2>🐍 Python Code</h2>
+
+                <button id="clearCodeBtn" class="small-btn">
+                    Clear
+                </button>
+            </div>
+
+            <textarea
+                id="codeEditor"
+                spellcheck="false"
+                placeholder="Enter your Python program here..."
+            >def calculate(a, b):
+    return a - b</textarea>
+
+        </div>
+
+
+        <!-- TEST CASE SECTION -->
+
+        <div class="panel test-panel">
+
+            <div class="panel-header">
+                <h2>🧪 Test Cases</h2>
+
+                <button id="addTestBtn" class="small-btn">
+                    + Add Test
+                </button>
+            </div>
+
+            <div id="testCases">
+
+                <div class="test-case">
+
+                    <div class="test-title">
+                        <span>Test Case 1</span>
+
+                        <button class="remove-test">
+                            ×
+                        </button>
+                    </div>
+
+                    <label>Input</label>
+
+                    <input
+                        type="text"
+                        class="test-input"
+                        value="5, 3"
+                        placeholder="Example: 5, 3"
+                    >
+
+                    <label>Expected Output</label>
+
+                    <input
+                        type="text"
+                        class="test-output"
+                        value="8"
+                        placeholder="Example: 8"
+                    >
+
+                </div>
+
+
+                <div class="test-case">
+
+                    <div class="test-title">
+                        <span>Test Case 2</span>
+
+                        <button class="remove-test">
+                            ×
+                        </button>
+                    </div>
+
+                    <label>Input</label>
+
+                    <input
+                        type="text"
+                        class="test-input"
+                        value="10, 5"
+                        placeholder="Example: 10, 5"
+                    >
+
+                    <label>Expected Output</label>
+
+                    <input
+                        type="text"
+                        class="test-output"
+                        value="15"
+                        placeholder="Example: 15"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACTION BUTTONS -->
+
+    <section class="actions">
+
+        <button id="runBtn" class="primary-btn">
+            ▶ Run Code
+        </button>
+
+        <button id="repairBtn" class="repair-btn">
+            🤖 AI Repair
+        </button>
+
+    </section>
+
+
+    <!-- OUTPUT SECTION -->
+
+    <section class="results">
+
+        <!-- Execution Result -->
+
+        <div class="panel result-panel">
+
+            <div class="panel-header">
+                <h2>📊 Test Results</h2>
+            </div>
+
+            <div id="testResults" class="result-content">
+
+                <div class="empty-state">
+                    Run your program to see test results.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PATCH RESULTS -->
+
+        <div class="patch-layout">
+
+            <!-- BEST PATCH -->
+
+            <div class="panel best-patch">
+
+                <div class="panel-header">
+
+                    <h2>⭐ Best Patch</h2>
+
+                    <span id="bestScore" class="score">
+                        —
+                    </span>
+
+                </div>
+
+                <pre id="bestPatchCode">No patch generated yet.</pre>
+
+                <div id="bestPatchInfo" class="patch-info">
+                    Generate a repair to see the best patch.
+                </div>
+
+            </div>
+
+
+            <!-- OTHER PATCHES -->
+
+            <div class="panel other-patches">
+
+                <div class="panel-header">
+
+                    <h2>Other Patches</h2>
+
+                    <span id="patchCount">
+                        0
+                    </span>
+
+                </div>
+
+                <div id="patchList">
+
+                    <div class="empty-state">
+                        No alternative patches yet.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
