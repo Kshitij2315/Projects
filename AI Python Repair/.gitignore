@@ -1,0 +1,17 @@
+# Environment variables
+.env
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# PyCharm
+.idea/
+
+# Test/cache files
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
